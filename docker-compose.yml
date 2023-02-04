@@ -1,6 +1,6 @@
 version: '5'
 services:
-
+#pao
   # container app
   app:
     build:
@@ -38,25 +38,25 @@ services:
   #   networks:
   #     red_docker:
 
-# # container bd
-  # db:
-  #   image: mariadb:10.6
-  #   container_name: container-bd_gaia
-  #   restart: unless-stopped
-  #   tty: true
-  #   ports:
-  #     - 3306:3306
-  #   volumes:
-  #     - "/etc/timezone:/etc/timezone:ro"
-  #     - "/etc/localtime:/etc/localtime"
-  #   # - "./data:/var/lib/mysql"
-  #   environment:
-  #     MYSQL_DATABASE: gaia
-  #     MYSQL_ROOT_PASSWORD: passoword
-  #     SERVICE_TAGS: container-bd_gaia
-  #     SERVICE_NAME: mysql
-  #   networks:
-  #     red_docker:
+# container bd
+  db:
+    image: mariadb:10.6
+    container_name: container-bd_agorapp
+    restart: unless-stopped
+    tty: true
+    ports:
+      - 3306:3306
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime"
+    # - "./data:/var/lib/mysql"
+    environment:
+      MYSQL_DATABASE: gaia
+      MYSQL_ROOT_PASSWORD: passoword
+      SERVICE_TAGS: container-bd_gaia
+      SERVICE_NAME: mysql
+    networks:
+      red_docker:
 
 # config network
 networks:
