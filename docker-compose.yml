@@ -1,7 +1,7 @@
 version: '5'
 services:
-#pao
-  # container app
+#pao jf
+  # container app  jf
   app:
     build:
       args:
@@ -38,7 +38,7 @@ services:
   #   networks:
   #     red_docker:
 
-# container bd
+# container bd 
   db:
     image: mariadb:10.6
     container_name: container-bd_agorapp
